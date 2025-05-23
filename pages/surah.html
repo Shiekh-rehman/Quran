@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ur">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Surah List with Classes and IDs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            direction: rtl;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        #surah-list {
+            list-style-type: none;
+            padding: 0;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .surah-item {
+            background: #007bff;
+            color: white;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .surah-item:hover {
+            background: #0056b3;
+        }
+
+        h2 {
+            text-align: center;
+            color: #064663;
+            margin-bottom: 15px;
+        }
+
+        .surah-section {
+            margin-bottom: 25px;
+        }
+
+        ul.surah-list {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        li.surah-item {
+            background: #bbe1fa;
+            color: #05445e;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: default;
+            font-weight: 600;
+            flex: 1 0 30%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(5, 68, 94, 0.2);
+        }
+
+        .note {
+            background: #dff6ff;
+            border-left: 5px solid #05445e;
+            padding: 12px 18px;
+            margin-bottom: 20px;
+            color: #05445e;
+            font-size: 15px;
+            border-radius: 8px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background: #05445e;
+            color: #dff6ff;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(5, 68, 94, 0.4);
+            transition: background 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn:hover {
+            background: #189ab4;
+        }
+
+        .btn i {
+            font-size: 20px;
+        }
+
+        .donation-note {
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: center;
+            color: #05445e;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h2>Surah List</h2>
+
+
+
+        <div class="note">
+            <p><strong>Note:</strong> "Surahs not available here can be downloaded from our Books Section in both Urdu
+                and English languages."
+
+
+
+
+
+
+
+
+                <strong>Books Section</strong> 
+            </p>
+            <p><strong>نوٹ:</strong> جو سورہ یہاں دستیاب نہیں ہیں، آپ انہیں ہمارے <strong>کتب سیکشن</strong> سے اردو اور
+                انگریزی دونوں زبانوں میں ڈاؤن لوڈ کر سکتے ہیں۔</p>
+        </div>
+
+        <div class="buttons">
+            <a href="https://wa.me/923115225163" target="_blank" class="btn">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp Contact
+            </a>
+            <a href="https://wa.me/923115225163?text=I%20want%20to%20donate" target="_blank" class="btn"
+                style="background:#ff6f61;">
+                <i class="fa fa-heart" aria-hidden="true"></i> Donate Now
+            </a>
+        </div>
+
+        <div class="donation-note">
+            <p>
+                <strong>Donation Purpose / عطیہ کا مقصد:</strong><br>
+                Ye donation madrassah ke bachon ke liye hai. Zyada se zyada donate karein taake hum behtareen taleem aur
+                sahulat faraham kar saken.<br>
+                یہ عطیہ مدرسہ کے بچوں کے لیے ہے۔ زیادہ سے زیادہ عطیہ کریں تاکہ ہم بہترین تعلیم اور سہولت فراہم کر سکیں۔
+            </p>
+        </div>
+    </div>
+
+    <!-- FontAwesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <h1 id="page-title">سورۃ کی فہرست</h1>
+    <ul id="surah-list">
+        <li class="surah-item" id="surah-al-fatiha"
+            data-image="https://avatars.mds.yandex.net/i?id=32d60662132925d2ca3ac3590ee7ceb4bee52f2a-5233003-images-thumbs&n=13">
+            الفاتحہ</li>
+        <li class="surah-item" id="surah-al-baqarah"
+            data-image="https://avatars.mds.yandex.net/i?id=4e0e7d1e1977bf1751b6053742f29705a9719f8a-12319966-images-thumbs&n=13">
+            البقرہ</li>
+        <li class="surah-item" id="surah-al-ikhlas"
+            data-image="https://avatars.mds.yandex.net/i?id=4f3a22006d0bc76bffdbae6bf988c79e8a27b07ee5b673da-12938349-images-thumbs&n=13">
+            الاخلاص</li>
+        <li class="surah-item" id="surah-al-falaq"
+            data-image="https://avatars.mds.yandex.net/i?id=daf29da3db84bddaf639c0512411a6829a0f143e-4232374-images-thumbs&n=13">
+            الفلق</li>
+        <li class="surah-item" id="surah-an-nas"
+            data-image="https://avatars.mds.yandex.net/i?id=1ca66cbbd45676c17a44b4e001e9a609fc3b96b0-10752166-images-thumbs&n=13">
+            الناس</li>
+        <li class="surah-item" id="surah-al-imran"
+            data-image="https://avatars.mds.yandex.net/i?id=ba8bbca1c2b061c237af25fd2d988a1206412c5f-4944748-images-thumbs&n=13">
+            آل عمران</li>
+        <li class="surah-item" id="surah-an-nisa" data-image="https://i.imgur.com/w0JOaG0.jpg">النساء</li>
+        <li class="surah-item" id="surah-al-maidah"
+            data-image="https://avatars.mds.yandex.net/i?id=68b2fbb94472e98364c91c0add407710ef2fe23f-5910334-images-thumbs&n=13">
+            المائدة</li>
+        <li class="surah-item" id="surah-al-anam"
+            data-image="https://avatars.mds.yandex.net/i?id=bffcc6637e7148647ad328803ec4fe6aa127ec21-10806524-images-thumbs&n=13">
+            الأنعام</li>
+        <li class="surah-item" id="surah-al-araf"
+            data-image="https://avatars.mds.yandex.net/i?id=44b6b5112351ac467d601c173795b5e91b558276-4935185-images-thumbs&n=13">
+            الأعراف</li>
+        <li class="surah-item" id="surah-al-anfal"
+            data-image="https://avatars.mds.yandex.net/i?id=b9dc80044f050925e003799e9502927972f5ee75-10695130-images-thumbs&n=13">
+            الأنفال</li>
+        <li class="surah-item" id="surah-at-tawbah"
+            data-image="https://avatars.mds.yandex.net/i?id=ca1435aea02071d16553735fb2d656325426959c-7555196-images-thumbs&n=13">
+            التوبة</li>
+        <li class="surah-item" id="surah-yunus"
+            data-image="https://avatars.mds.yandex.net/i?id=2202df74dc5fcbbb50f800a0e8f79153dba41557-8249766-images-thumbs&n=13">
+            يونس</li>
+
+        <li class="surah-item" id="surah-hud" data-image="">هود</li>
+        <li class="surah-item" id="surah-yusuf" data-image="">يوسف</li>
+        <li class="surah-item" id="surah-ar-rad" data-image="">الرعد</li>
+        <li class="surah-item" id="surah-ibraheem" data-image="">إبراهيم</li>
+        <li class="surah-item" id="surah-al-hijr" data-image="">الحجر</li>
+        <li class="surah-item" id="surah-an-nahl" data-image="">النحل</li>
+        <li class="surah-item" id="surah-al-isra" data-image="">الإسراء</li>
+        <li class="surah-item" id="surah-al-kahf" data-image="">الكهف</li>
+        <li class="surah-item" id="surah-maryam" data-image="">مريم</li>
+        <li class="surah-item" id="surah-ta-ha" data-image="">طه</li>
+        <li class="surah-item" id="surah-al-anbiya" data-image="">الأنبياء</li>
+        <li class="surah-item" id="surah-al-hajj" data-image="">الحج</li>
+        <li class="surah-item" id="surah-al-muminun" data-image="">المؤمنون</li>
+        <li class="surah-item" id="surah-an-nur" data-image="">النور</li>
+        <li class="surah-item" id="surah-al-furqan" data-image="">الفرقان</li>
+        <li class="surah-item" id="surah-ash-shuara" data-image="">الشعراء</li>
+        <li class="surah-item" id="surah-an-naml" data-image="">النمل</li>
+        <li class="surah-item" id="surah-al-qasas" data-image="">القصص</li>
+        <li class="surah-item" id="surah-al-ankabut" data-image="">العنكبوت</li>
+        <li class="surah-item" id="surah-ar-rum" data-image="">الروم</li>
+        <li class="surah-item" id="surah-luqman" data-image="">لقمان</li>
+        <li class="surah-item" id="surah-as-sajda" data-image="">السجدة</li>
+        <li class="surah-item" id="surah-al-ahzab" data-image="">الأحزاب</li>
+        <li class="surah-item" id="surah-saba" data-image="">سبأ</li>
+        <li class="surah-item" id="surah-fatir" data-image="">فاطر</li>
+        <li class="surah-item" id="surah-ya-sin" data-image="">يس</li>
+        <li class="surah-item" id="surah-as-saffat" data-image="">الصافات</li>
+        <li class="surah-item" id="surah-sad" data-image="">ص</li>
+        <li class="surah-item" id="surah-az-zumar" data-image="">الزمر</li>
+        <li class="surah-item" id="surah-ghafir" data-image="">غافر</li>
+        <li class="surah-item" id="surah-fussilat" data-image="">فصلت</li>
+        <li class="surah-item" id="surah-ash-shura" data-image="">الشورى</li>
+        <li class="surah-item" id="surah-az-zukhruf" data-image="">الزخرف</li>
+        <li class="surah-item" id="surah-ad-dukhan" data-image="">الدخان</li>
+        <li class="surah-item" id="surah-al-jathiya" data-image="">الجاثية</li>
+        <li class="surah-item" id="surah-al-ahqaf" data-image="">الأحقاف</li>
+        <li class="surah-item" id="surah-muhammad" data-image="">محمد</li>
+        <li class="surah-item" id="surah-al-fath" data-image="">الفتح</li>
+        <li class="surah-item" id="surah-al-hujurat" data-image="">الحجرات</li>
+        <li class="surah-item" id="surah-qaf" data-image="">ق</li>
+        <li class="surah-item" id="surah-adh-dhariyat" data-image="">الذاريات</li>
+        <li class="surah-item" id="surah-at-tur" data-image="">الطور</li>
+        <li class="surah-item" id="surah-an-najm" data-image="">النجم</li>
+        <li class="surah-item" id="surah-al-qamar" data-image="">القمر</li>
+        <li class="surah-item" id="surah-ar-rahman" data-image="">الرحمن</li>
+        <li class="surah-item" id="surah-al-waqia" data-image="">الواقعة</li>
+        <li class="surah-item" id="surah-al-hadid" data-image="">الحديد</li>
+        <li class="surah-item" id="surah-al-mujadila" data-image="">المجادلة</li>
+        <li class="surah-item" id="surah-al-hashr" data-image="">الحشر</li>
+        <li class="surah-item" id="surah-al-mumtahina" data-image="">الممتحنة</li>
+        <li class="surah-item" id="surah-as-saff" data-image="">الصف</li>
+        <li class="surah-item" id="surah-al-jumua" data-image="">الجمعة</li>
+        <li class="surah-item" id="surah-al-munafiqoon" data-image="">المنافقون</li>
+        <li class="surah-item" id="surah-at-taghabun" data-image="">التغابن</li>
+        <li class="surah-item" id="surah-at-talaq" data-image="">الطلاق</li>
+        <li class="surah-item" id="surah-at-tahrim" data-image="">التحريم</li>
+        <li class="surah-item" id="surah-al-mulk" data-image="">الملك</li>
+        <li class="surah-item" id="surah-al-qalam" data-image="">القلم</li>
+        <li class="surah-item" id="surah-al-haqqah" data-image="">الحاقة</li>
+        <li class="surah-item" id="surah-al-maarij" data-image="">المعارج</li>
+        <li class="surah-item" id="surah-nuh" data-image="">نوح</li>
+        <li class="surah-item" id="surah-al-jinn" data-image="">الجن</li>
+        <li class="surah-item" id="surah-al-muzzammil" data-image="">المزّمّل</li>
+        <li class="surah-item" id="surah-al-muddathir" data-image="">المدّثر</li>
+        <li class="surah-item" id="surah-al-qiyama" data-image="">القيامة</li>
+        <li class="surah-item" id="surah-al-insan" data-image="">الإنسان</li>
+        <li class="surah-item" id="surah-al-mursalat" data-image="">المرسلات</li>
+        <li class="surah-item" id="surah-an-naba" data-image="">النبأ</li>
+        <li class="surah-item" id="surah-an-naziat" data-image="">النازعات</li>
+        <li class="surah-item" id="surah-abasa" data-image="">عبس</li>
+        <li class="surah-item" id="surah-at-takwir" data-image="">التكوير</li>
+        <li class="surah-item" id="surah-al-infitar" data-image="">الإنفطار</li>
+        <li class="surah-item" id="surah-al-mutaffifin" data-image="">المطفّفين</li>
+        <li class="surah-item" id="surah-al-inshiqaq" data-image="">الإنشقاق</li>
+        <li class="surah-item" id="surah-al-buruj" data-image="">البروج</li>
+        <li class="surah-item" id="surah-at-tariq" data-image="">الطارق</li>
+        <li class="surah-item" id="surah-al-ala" data-image="">الأعلى</li>
+        <li class="surah-item" id="surah-al-ghashiya" data-image="">الغاشية</li>
+        <li class="surah-item" id="surah-al-fajr" data-image="">الفجر</li>
+        <li class="surah-item" id="surah-al-balad" data-image="">البلد</li>
+        <li class="surah-item" id="surah-ash-shams" data-image="">الشمس</li>
+        <li class="surah-item" id="surah-al-lail" data-image="">الليل</li>
+        <li class="surah-item" id="surah-ad-duha" data-image="">الضحى</li>
+        <li class="surah-item" id="surah-al-inshirah" data-image="">الشرح</li>
+        <li class="surah-item" id="surah-at-tin" data-image="">التين</li>
+        <li class="surah-item" id="surah-al-alaq" data-image="">العلق</li>
+        <li class="surah-item" id="surah-al-qadr" data-image="">القدر</li>
+        <li class="surah-item" id="surah-al-bayyinah" data-image="">البينة</li>
+        <li class="surah-item" id="surah-az-zalzalah" data-image="">الزلزلة</li>
+        <li class="surah-item" id="surah-al-adiyat" data-image="">العاديات</li>
+        <li class="surah-item" id="surah-al-qaria" data-image="">القارعة</li>
+        <li class="surah-item" id="surah-at-takathur" data-image="">التكاثر</li>
+        <li class="surah-item" id="surah-al-asr" data-image="">العصر</li>
+        <li class="surah-item" id="surah-al-humazah" data-image="">الهمزة</li>
+        <li class="surah-item" id="surah-al-fil" data-image="">الفيل</li>
+        <li class="surah-item" id="surah-quraysh" data-image="">قريش</li>
+        <li class="surah-item" id="surah-al-maoon" data-image="">الماعون</li>
+        <li class="surah-item" id="surah-al-kauthar" data-image="">الكوثر</li>
+        <li class="surah-item" id="surah-al-kafiroon" data-image="">الكافرون</li>
+        <li class="surah-item" id="surah-an-nasr" data-image="">النصر</li>
+        <li class="surah-item" id="surah-al-masad" data-image="">المسد</li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const surahList = document.getElementById('surah-list');
+        surahList.addEventListener('click', (e) => {
+            if (e.target && e.target.classList.contains('surah-item')) {
+                const imageUrl = e.target.getAttribute('data-image');
+                if (imageUrl) {
+                    window.open(imageUrl, '_blank');
+                } else {
+                    alert('اس سورۃ کی تصویر دستیاب نہیں ہے');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
