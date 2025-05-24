@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Books</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e6f9ec;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #006400;
+      margin-bottom: 40px;
+    }
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .book-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 128, 0, 0.15);
+    }
+
+    .book-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      object-position: top center;
+    }
+
+    .book-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #006400;
+      margin: 12px 0;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    button {
+      background: #00cc66;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #00994d;
+    }
+
+    .donate-button {
+      background: #ffffff;
+      color: #00994d;
+      border: 2px solid #00cc66;
+    }
+
+    .donate-button:hover {
+      background: #e6ffe6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Book Collection</h1>
+  <div class="books-grid">
+    <!-- Book Card Template -->
+    <div class="book-card">
+      <img src="https://avatars.mds.yandex.net/i?id=c9fdaae9f86519a0a9cfc29cfaa6349d44454e67-9266849-images-thumbs&n=13" class="book-image" alt="Book 1">
+      <div class="book-title">Sirat ul Jinan</div>
+      <div class="buttons">
+        <button onclick="downloadBook('https://islamic1articles.home.blog/2023/07/02/tafsir-sirat-ul-jinan/')">📥 Download</button>
+        <button class="donate-button" onclick="donate()">💸 Donate</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="https://haameem7.wordpress.com/wp-content/uploads/2023/02/madani-qaida-urdu-pdf.jpg?w=220&h=288" class="book-image" alt="Book 2">
+      <div class="book-title">Madni Qaidah (Urdu)</div>
+      <div class="buttons">
+        <button onclick="downloadBook('https://haameem7.wordpress.com/wp-content/uploads/2023/02/madani-qaida-urdu.pdf')">📥 Download</button>
+        <button class="donate-button" onclick="donate()">💸 Donate</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="https://ia902200.us.archive.org/BookReader/BookReaderImages.php?zip=/34/items/bahar-e-shariat-jild-1-a/bahar-e-shariat-jild-1-a_jp2.zip&file=bahar-e-shariat-jild-1-a_jp2/bahar-e-shariat-jild-1-a_0000.jp2&id=bahar-e-shariat-jild-1-a&scale=8&rotate=0" class="book-image" alt="Book 3">
+      <div class="book-title">Bahar e Shariyat</div>
+      <div class="buttons">
+        <button onclick="downloadBook('https://archive.org/details/bahar-e-shariat-jild-1-a/bahar-e-shariat-jild-1-a/')">📥 Download</button>
+        <button class="donate-button" onclick="donate()">💸 Donate</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="https://ia800509.us.archive.org/BookReader/BookReaderImages.php?zip=/0/items/islami-behno-ki-namaz_20230828/islami-behno-ki-namaz_jp2.zip&file=islami-behno-ki-namaz_jp2/islami-behno-ki-namaz_0000.jp2&id=islami-behno-ki-namaz_20230828&scale=2&rotate=0" class="book-image" alt="Book 4">
+      <div class="book-title">Islami Behno Ki Namaz</div>
+      <div class="buttons">
+        <button onclick="downloadBook('https://archive.org/details/islami-behno-ki-namaz_20230828/page/n17/mode/2up')">📥 Download</button>
+        <button class="donate-button" onclick="donate()">💸 Donate</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="https://html.scribdassets.com/8vvx7pt8cg8oovmq/images/1-0b1922fee2.jpg" class="book-image" alt="Book 5">
+      <div class="book-title">Namaz ki Kitab</div>
+      <div class="buttons">
+        <button onclick="downloadBook('https://www.scribd.com/document/509067374/Namaz-Ki-Kitab-in-PDF-Namaz-with-Urdu-Translation-Free-Islamic-Books-SubKuch-Web')">📥 Download</button>
+        <button class="donate-button" onclick="donate()">💸 Donate</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="https://ia802804.us.archive.org/BookReader/BookReaderImages.php?zip=/8/items/NAAMRAKHNEKEAHKAAM/NAAM%20RAKHNE%20KE%20AHKAAM_jp2.zip&file=NAAM%20RAKHNE%20KE%20AHKAAM_jp2/NAAM%20RAKHNE%20KE%20AHKAAM_0000.jp2&id=NAAMRAKHNEKEAHKAAM&scale=8&rotate=0" class="book-image" alt="Book 6">
+      <div class="book-title">Nam Rakhne K Ahkam</div>
+      <div class="buttons">
+        <button onclick="downloadBook('https://archive.org/details/NAAMRAKHNEKEAHKAAM')">📥 Download</button>
+        <button class="donate-button" onclick="donate()">💸 Donate</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="https://ia904602.us.archive.org/BookReader/BookReaderImages.php?zip=/8/items/farz-uloom-sikhiye/Farz%20uloom%20Sikhiye_jp2.zip&file=Farz%20uloom%20Sikhiye_jp2/Farz%20uloom%20Sikhiye_0000.jp2&id=farz-uloom-sikhiye&scale=8&rotate=0" class="book-image" alt="Book 7">
+      <div class="book-title">Farz Uloom Sikhiye</div>
+      <div class="buttons">
+        <button onclick="downloadBook('https://archive.org/details/farz-uloom-sikhiye')">📥 Download</button>
+        <button class="donate-button" onclick="donate()">💸 Donate</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="https://ia801303.us.archive.org/BookReader/BookReaderImages.php?zip=/24/items/bahare-shariat-vol-15-amjad-ali-barkati/bahare%20shariat%20-%20vol%2015%20-%20amjad%20ali%20barkati_jp2.zip&file=bahare%20shariat%20-%20vol%2015%20-%20amjad%20ali%20barkati_jp2/bahare%20shariat%20-%20vol%2015%20-%20amjad%20ali%20barkati_0000.jp2&id=bahare-shariat-vol-15-amjad-ali-barkati&scale=4&rotate=0" class="book-image" alt="Book 8">
+      <div class="book-title">Bahar e Shariat</div>
+      <div class="buttons">
+        <button onclick="downloadBook('https://archive.org/details/bahare-shariat-vol-15-amjad-ali-barkati')">📥 Download</button>
+        <button class="donate-button" onclick="donate()">💸 Donate</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function downloadBook(filename) {
+      const link = document.createElement("a");
+      link.href = filename;
+      link.download = filename;
+      link.click();
+    }
+
+    function donate() {
+      alert("Send your donation to Easypaisa: 923115225163");
+    }
+  </script>
+</body>
+</html>
