@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Quran Classes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0fff4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .class-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 128, 0, 0.15);
+      text-align: center;
+    }
+
+    .class-section h2 {
+      color: #007a33;
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .platforms {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .platform-card {
+      flex: 1 1 220px;
+      background: #e6f9ec;
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .platform-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+
+    .platform-card h3 {
+      margin: 10px 0 8px;
+      color: #004d26;
+    }
+
+    .join-btn {
+      background: #00cc66;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .join-btn:hover {
+      background: #00994d;
+    }
+
+    @media (max-width: 600px) {
+      .platform-card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="class-section">
+    <h2>Join Our Online Quran Classes</h2>
+    <p>Attend live sessions through your favorite platform.</p>
+
+    <div class="platforms">
+
+      <!-- Zoom -->
+      <div class="platform-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Zoom_Communications_Logo.svg" alt="Zoom">
+        <h3>Zoom</h3>
+        <button class="join-btn" onclick="window.open('https://app.zoom.us/wchttps://app.zoom.us/wc', '_blank')">Join Class</button>
+      </div>
+
+      <!-- Google Meet -->
+      <div class="platform-card">
+        <img src="data:image/webp;base64,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" alt="Google Meet">
+        <h3>Google Meet</h3>
+        <button class="join-btn" onclick="window.open('https://meet.google.com/landing', '_blank')">Join Class</button>
+      </div>
+
+      <!-- Skype -->
+      <div class="platform-card">
+        <img src="data:image/webp;base64,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" alt="Skype">
+        <h3>Skype</h3>
+        <button class="join-btn" onclick="window.open('https://www.skype.com/en/international-calls/', '_blank')">Join Class</button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
