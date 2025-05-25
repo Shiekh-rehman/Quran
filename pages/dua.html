@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duas - Daily Islamic Supplications</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3fff4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #007a33;
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      max-width: 500px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #b2f2bb;
+      border-radius: 8px;
+    }
+
+    .dua-card {
+      background-color: #ffffff;
+      border: 2px solid #b2f2bb;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 128, 0, 0.1);
+    }
+
+    .dua-title {
+      font-size: 20px;
+      color: #004d26;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .dua-arabic {
+      font-size: 22px;
+      color: #333;
+      direction: rtl;
+      text-align: right;
+      font-family: 'Amiri', serif;
+      margin-bottom: 10px;
+    }
+
+    .dua-translation {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .buttons button, .buttons a {
+      padding: 8px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007a33;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .dua-card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🤲 Daily Duas</h1>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search duas...">
+  </div>
+
+  <div id="duaContainer">
+  
+
+    <div class="dua-card">
+  <div class="dua-title">Dua After Waking Up</div>
+  <div class="dua-arabic">الْـحَمْـدُ للهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ</div>
+  <div class="dua-translation">All praise is for Allah who gave us life after having taken it from us and unto Him is the resurrection.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=الْـحَمْـدُ للهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua Before Sleeping</div>
+  <div class="dua-arabic">بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا</div>
+  <div class="dua-translation">In Your name, O Allah, I die and I live.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua When Leaving the House</div>
+  <div class="dua-arabic">بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ</div>
+  <div class="dua-translation">In the name of Allah, I place my trust in Allah, and there is no might nor power except with Allah.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua When Entering the House</div>
+  <div class="dua-arabic">بِسْمِ اللَّهِ وَلَجْنَا وَبِسْمِ اللَّهِ خَرَجْنَا وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا</div>
+  <div class="dua-translation">In the name of Allah we enter, and in the name of Allah we leave, and upon our Lord we place our trust.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=بِسْمِ اللَّهِ وَلَجْنَا وَبِسْمِ اللَّهِ خَرَجْنَا وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua After Eating</div>
+  <div class="dua-arabic">الْـحَمْـدُ للهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ</div>
+  <div class="dua-translation">All praise is for Allah who fed me this and provided it for me without any might nor power from myself.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=الْـحَمْـدُ للهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ" target="_blank">Share</a>
+  </div>
+</div>
+<div class="dua-card">
+  <div class="dua-title">Dua Before Eating</div>
+  <div class="dua-arabic">بِسْمِ اللَّهِ وَبَارَكَةُ اللَّهِ</div>
+  <div class="dua-translation">In the name of Allah and with the blessings of Allah.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=بِسْمِ اللَّهِ وَبَارَكَةُ اللَّهِ" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua Before Entering Toilet</div>
+  <div class="dua-arabic">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبْثِ وَالْخَبَائِثِ</div>
+  <div class="dua-translation">O Allah, I seek refuge with You from male and female devils.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبْثِ وَالْخَبَائِثِ" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua After Leaving Toilet</div>
+  <div class="dua-arabic">غُفْرَانَكَ</div>
+  <div class="dua-translation">I ask You for forgiveness.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=غُفْرَانَكَ" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua When Looking in the Mirror</div>
+  <div class="dua-arabic">اللَّهُمَّ كَمَا أَحْسَنْتَ خَلْقِي فَحَسِّنْ خُلُقِي</div>
+  <div class="dua-translation">O Allah, just as You have made my external features beautiful, make my character beautiful as well.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=اللَّهُمَّ كَمَا أَحْسَنْتَ خَلْقِي فَحَسِّنْ خُلُقِي" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua When Wearing New Clothes</div>
+  <div class="dua-arabic">اللَّهُمَّ لَكَ الْـحَمْدُ، أَنْتَ كَسَوْتَنِيهِ، أَسْأَلُكَ مِنْ خَيْرِهِ</div>
+  <div class="dua-translation">O Allah, all praise is for You. You have clothed me with it. I ask You for its goodness.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=اللَّهُمَّ لَكَ الْـحَمْدُ، أَنْتَ كَسَوْتَنِيهِ، أَسْأَلُكَ مِنْ خَيْرِهِ" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua Before Studying</div>
+  <div class="dua-arabic">رَبِّ زِدْنِي عِلْمًا</div>
+  <div class="dua-translation">O my Lord, increase me in knowledge.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=رَبِّ زِدْنِي عِلْمًا" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua After Sneezing</div>
+  <div class="dua-arabic">الْـحَمْـدُ للهِ</div>
+  <div class="dua-translation">All praise is for Allah.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=الْـحَمْـدُ للهِ" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua for Parents</div>
+  <div class="dua-arabic">رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا</div>
+  <div class="dua-translation">My Lord, have mercy upon them as they brought me up [when I was] small.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua for Forgiveness</div>
+  <div class="dua-arabic">رَبِّ اغْفِرْ لِي وَارْحَمْنِي</div>
+  <div class="dua-translation">My Lord, forgive me and have mercy on me.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=رَبِّ اغْفِرْ لِي وَارْحَمْنِي" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua in Distress</div>
+  <div class="dua-arabic">لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ</div>
+  <div class="dua-translation">There is no god except You; Glory be to You, indeed I was from the wrongdoers.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua Before Journey</div>
+  <div class="dua-arabic">سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ</div>
+  <div class="dua-translation">Glory be to Him who has brought this under our control, though we were unable to control it.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua for Rain</div>
+  <div class="dua-arabic">اللَّهُمَّ صَيِّبًا نَافِعًا</div>
+  <div class="dua-translation">O Allah, (bring) beneficial rain.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=اللَّهُمَّ صَيِّبًا نَافِعًا" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua for Guidance</div>
+  <div class="dua-arabic">اللَّهُمَّ اهْدِنِي وَسَدِّدْنِي</div>
+  <div class="dua-translation">O Allah, guide me and keep me firm.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=اللَّهُمَّ اهْدِنِي وَسَدِّدْنِي" target="_blank">Share</a>
+  </div>
+</div>
+
+<div class="dua-card">
+  <div class="dua-title">Dua When You See Someone in Trouble</div>
+  <div class="dua-arabic">الْـحَمْـدُ للهِ الَّذِي عَافَانِي مِمَّا ابْتَلَاكَ بِهِ</div>
+  <div class="dua-translation">All praise is for Allah who has spared me from that which He has afflicted you with.</div>
+  <div class="buttons">
+    <button onclick="copyDua(this)">Copy Arabic</button>
+    <a href="https://wa.me/?text=الْـحَمْـدُ للهِ الَّذِي عَافَانِي مِمَّا ابْتَلَاكَ بِهِ" target="_blank">Share</a>
+  </div>
+</div>
+
+<!-- Aur 15 duain chahiyein? Bolo toh complete 20 ka bundle bhej doon with same format -->
+
+    <!-- More duas can be added here -->
+  </div>
+
+  <script>
+    // Search functionality
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const filter = this.value.toLowerCase();
+      const duas = document.querySelectorAll('.dua-card');
+      duas.forEach(dua => {
+        const text = dua.innerText.toLowerCase();
+        dua.style.display = text.includes(filter) ? 'block' : 'none';
+      });
+    });
+
+    // Copy Arabic text
+    function copyDua(button) {
+      const arabic = button.parentElement.parentElement.querySelector('.dua-arabic').innerText;
+      navigator.clipboard.writeText(arabic).then(() => {
+        button.innerText = 'Copied!';
+        setTimeout(() => (button.innerText = 'Copy Arabic'), 2000);
+      });
+    }
+  </script>
+</body>
+</html>
